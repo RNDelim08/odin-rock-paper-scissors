@@ -72,4 +72,12 @@ for (i = 0; i < 5; i++) {
   playGame();
 }
 
+if (humanScore > computerScore) {
+  console.log(`Final Score: ${humanScore}:${computerScore}, in favor of you! Congratulations, you won the game!`);
+} else if (humanScore < computerScore) {
+  console.log(`Final Score: ${humanScore}:${computerScore}, in favor of computer! Better luck next time bud, you lost!`);
+} else {
+  console.log(`Final Score: ${humanScore}:${computerScore}, in favor of ...a tie?!`);
+}
+
 
