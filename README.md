@@ -1,0 +1,4 @@
+This is the third project in the Odin Project Foundation and the first in its Javascript section. 
+This is a simple rock-paper-scissor game created by basic javascript code where the user and the computer will pick between those three and it will be compared just as usual to determine the winner in five rounds of the game. There is currently a problem with the code wherein a full round of the game is still being logged even though the user did not correctly input the word rock, paper or scissors. I am trying to figure that out as of the moment.
+This game is primarily played in the console of the browser.
+The code in the game is made of simple functions, variables and constants, if/else statement and a for-loop. 
