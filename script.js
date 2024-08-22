@@ -23,20 +23,43 @@ function getComputerChoice() {
 //  Create a prompt where users can input their choice between rock, paper or scissors
 
 function getHumanChoice() {
-  let humanChoice = prompt('Choose between rock, paper or scissors. Type it below.', 'rock, paper, scissors');
+  let humanChoice = prompt('Choose between rock, paper or scissors. Type it below.', 'rock, paper, scissors').toLowerCase();
+  return humanChoice;
 }
 
 //  Create a way to provide points to either the computer or user depending who wins per round.
 let humanScore = 0;
 let computerScore = 0;
 
-//  Create a way to check which wins between rock, paper and scissors choice
+// //  Create a way to check which wins between rock, paper and scissors choice
 
 function playRound(humanChoice, computerChoice) {
-  
+  if (humanSelection == 'rock' && computerSelection == 'rock'
+    || humanSelection == 'paper' && computerSelection == 'paper'
+    || humanSelection == 'scissors' && computerSelection == 'scissors'
+  ) {
+    console.log('Tie!');
+  } else if (humanSelection == 'paper' && computerSelection == 'rock'
+    || humanSelection == 'rock' && computerSelection == 'scissors'
+    || humanSelection == 'scissors' && computerSelection == 'paper'
+  ) {
+    console.log('You won!');
+    humanScore++;
+  } else if (humanSelection == 'rock' && computerSelection == 'paper'
+    || humanSelection == 'paper' && computerSelection == 'scissors'
+    || humanSelection == 'scissors' && computerSelection == 'rock'
+  ) {
+    console.log('You lost!');
+    computerScore++;
+  } else {
+    alert('Come on man!')
+  }
 }
 
 const humanSelection = getHumanChoice();
-const computerChoice = getComputerChoice();
+const computerSelection = getComputerChoice();
 
-//  Make the game a best of five rounds or first to three wins. 
+playRound(humanSelection, computerSelection);
+
+
+// //  Make the game a best of five rounds or first to three wins. 
